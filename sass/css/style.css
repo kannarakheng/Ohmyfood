@@ -1,3 +1,126 @@
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  animation: disappear 1500ms ease-in-out forwards;
+  animation-delay: 1000ms;
+}
+.loader__container {
+  border: 6px solid transparent;
+  border-right-color: #9356DC;
+  border-left-color: #FF79DA;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1000ms linear infinite;
+}
+.loader__container::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  bottom: 10px;
+  right: 10px;
+  border: 6px solid transparent;
+  border-radius: 50%;
+  border-top-color: #9356DC;
+  border-bottom-color: #FF79DA;
+  opacity: 0.6;
+  animation: spinreverse 500ms linear infinite;
+}
 
+button {
+  border: none;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 0px 40px 0px 40px;
+}
+
+/*Font*/
+* {
+  font-family: "roboto", sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* General main */
+h2 {
+  margin: 24px;
+}
+
+/* General footer */
+ul li {
+  padding-bottom: 5px;
+  list-style-position: outside;
+}
+
+.nav__logo {
+  width: 170px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+}
+
+.form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 20px 0px 20px 0px;
+  background-color: #EAEAEA;
+  box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  justify-content: center;
+}
+.form__location-dot {
+  font-size: 16px;
+  margin-right: 10px;
+  align-items: center;
+}
+.form__ville {
+  font-weight: bold;
+  background-color: #EAEAEA;
+  border: none;
+  padding: 0px;
+  text-align: center;
+  font-size: 19px;
+  width: 150px;
+}
+
+.section__hero {
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F6F6;
+  text-align: center;
+  padding: 40px 0px 80px 0px;
+}
+.section__hero p {
+  font-size: 18px;
+  margin: 0px 20px 20px 20px;
+}
+.section__hero__button {
+  color: white;
+  width: 218px;
+  padding: 20px;
+  border-radius: 25px;
+  margin: auto;
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  transition: all 700ms ease-in-out;
+}
+.section__hero__button:hover {
+  transform: scale(1.1);
+  box-shadow: 3px 12px 22px 3px rgba(0, 0, 0, 0.4);
+}
 
 /*# sourceMappingURL=style.css.map */

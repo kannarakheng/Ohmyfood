@@ -3,3 +3,85 @@
 @import "effets";
 @import "function";
 @import "button";
+
+/*Font*/
+
+* {
+    font-family: 'roboto', sans-serif;
+    margin:0;
+}
+
+a {
+    text-decoration: none;
+    color:black
+}
+
+/* General main */
+
+h2 {
+    margin: 24px; 
+   
+}
+
+/* General footer */
+
+ul li {
+    padding-bottom: 5px;
+    list-style-position: outside;
+  }
+
+// header et formulaire
+
+.nav {
+    &__logo {
+        width: 170px;
+        display:block;
+        @include center-box;
+    }
+}
+    
+.form {
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    padding:20px 0px 20px 0px;
+    background-color: $background-location;
+    box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    justify-content: center; 
+    &__location-dot{
+        font-size: 16px;
+        margin-right:10px;
+        align-items: center;
+    }
+    &__ville{
+        font-weight: bold;
+        background-color: $background-location;
+        border:none;
+        padding:0px;
+        text-align: center;
+        font-size: 19px;
+        width:150px;
+    }
+
+}
+
+.section__hero {
+    display: flex;
+    flex-direction: column;
+    background-color: $background-color;
+    text-align: center;
+    padding: 40px 0px 80px 0px;
+        p   {
+            font-size: 18px;
+            margin:0px 20px 20px 20px;
+        }
+        &__button {
+            @include button-pink;
+            transition: all 700ms ease-in-out ;
+
+        &:hover {
+            transform: scale(1.10);
+            box-shadow: 3px 12px 22px 3px rgba(0, 0, 0, 0.40);   
+        }
+    }
+}
