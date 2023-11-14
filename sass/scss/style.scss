@@ -155,8 +155,50 @@ ul li {
                 width: 100%;
                 max-height: 169px;       
             }
+            &__text {
+                margin: 8px;
+                &__title {
+                    padding-bottom: 10px;
+                }
+            }
         }
 
+    }
+}
+
+.restaurants {
+    &__cards {
+        &__card {
+            &__heart {
+                cursor: pointer;
+                position:absolute;
+                width:24px;
+                height: 24px;
+                bottom:30px;
+                right:24px;  
+
+                .fa-heart {
+                    font-size: 24px;
+                    transition: opacity 1s ease-in-out; 
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+                .fa-regular {
+                    position:absolute;
+                    top:0;
+                    left:0;
+                }
+                .fa-solid {
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    opacity:0;
+                    background: linear-gradient($primary-color,$secondary-color);
+
+                 }
+            }
+        }
     }
 }
 
