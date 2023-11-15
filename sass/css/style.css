@@ -268,4 +268,139 @@ ul li {
   width: 20px;
 }
 
+/* Menu page */
+.main__menu {
+  background-color: #EAEAEA;
+}
+
+.main__img img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  max-height: 400px;
+  margin-top: -10px;
+}
+
+.nav__bar {
+  text-align: center;
+}
+.nav__bar__logo {
+  padding: 20px 0px 0px 10px;
+  width: 200px;
+}
+.nav__bar__button--return {
+  position: relative;
+  padding: 0;
+}
+.nav__bar i::before {
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  font-size: 26px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #EAEAEA;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  position: relative;
+  top: -30px;
+}
+.menu__title {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 27px;
+  margin-left: 20px;
+}
+.menu__heart {
+  cursor: pointer;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 8px;
+  right: 40px;
+}
+.menu__heart .fa-heart {
+  font-size: 24px;
+  transition: opacity 500ms ease-in-out;
+}
+.menu__heart .fa-heart:hover {
+  opacity: 1;
+}
+.menu__heart .fa-regular {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.menu__heart .fa-solid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background: linear-gradient(#9356DC, #FF79DA);
+}
+.menu__card {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+  white-space: nowrap;
+}
+.menu__card span {
+  border-bottom: 3px solid #99E2D0;
+}
+.menu__card__text {
+  margin: 10px;
+  font-weight: normal;
+}
+.menu__card__content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #F6F6F6;
+  border-radius: 10px;
+  padding-left: 20px;
+  margin: 20px 10px 20px 10px;
+  box-shadow: 0px 4px 15px 3px rgba(0, 0, 0, 0.1);
+  line-height: 45px;
+  overflow: hidden;
+}
+.menu__card__content:hover .menu__card__content__checkbox {
+  width: 100px;
+}
+.menu__card__content__title {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu__card__content:hover .menu__card__content__title {
+  margin-right: 80px;
+}
+.menu__card__content__checkbox {
+  position: relative;
+  background-color: #99E2D0;
+  width: 0px;
+  top: 12px;
+  margin-top: -57px;
+  transition: width 0.5s ease-in-out;
+}
+.menu__card__content__checkbox i {
+  margin-left: 10px;
+}
+.menu__card__content__text {
+  display: flex;
+  flex-direction: row;
+}
+.menu__card__content__text__subtitle {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+.menu__card__content__text__price {
+  position: relative;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */

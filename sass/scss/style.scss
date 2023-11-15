@@ -246,3 +246,149 @@ ul li {
         }
    }
 }
+
+/* Menu page */
+
+.main__menu {
+    background-color: $background-location;
+}
+
+.main__img {
+    & img {
+        -o-object-fit: cover;
+           object-fit: cover;
+        width:100%;
+        max-height: 400px;  
+        margin-top: -10px;
+    }
+}
+
+.nav__bar { 
+    text-align: center;
+    &__logo {
+        padding:20px 0px 0px 10px;
+        width: 200px;
+    }   
+   &__button--return {
+        position: relative;
+        padding: 0;
+    }
+    & i::before {
+        position:absolute;
+        bottom:30px;
+        left:10px;
+        font-size: 26px;
+    }
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    background-color: $background-location;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    position: relative;
+    top:-30px;
+
+    &__title {
+        font-family: "Shrikhand", sans-serif;
+        font-size: 27px;
+        margin-left: 20px;
+    }
+    &__heart {
+        cursor: pointer;
+        position: absolute;
+        width:24px;
+        height:24px;
+        top:8px;
+        right: 40px;
+        .fa-heart {
+            font-size: 24px;  
+            transition: opacity 500ms ease-in-out;          
+            &:hover {
+                opacity:1;
+            }
+        }
+        .fa-regular {
+            position:absolute;
+            top:0;
+            left:0;
+        }
+
+        .fa-solid {
+            position: absolute;
+            top:0;
+            left:0;
+            opacity:0;
+            background: linear-gradient($primary-color, $secondary-color);
+        }
+    }
+    &__card {
+        font-size: 16px;
+        font-weight: normal;
+        margin:0;
+        white-space: nowrap;
+        & span {
+            border-bottom: 3px solid $tertary-color;         
+        }
+        &__text {
+            margin:10px;
+            font-weight: normal;
+        }
+        &__content {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            background-color: $background-color;
+            border-radius: 10px;
+            padding-left: 20px;
+            margin:20px 10px 20px 10px;
+            box-shadow: 0px 4px 15px 3px rgba(0,0,0,0.10);
+            line-height: 45px;
+            overflow: hidden;
+  
+            &:hover &__checkbox {
+               width:100px;
+            }
+            &__title {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+
+            &:hover &__title {
+               margin-right: 80px;
+
+            }        
+  
+            &__checkbox {
+               position: relative;
+                background-color: $tertary-color;
+                width:0px;
+                top:12px;
+                margin-top: -57px;
+                transition :width 0.5s ease-in-out;
+
+                & i {
+                    margin-left: 10px;
+                }     
+            }
+            &__text {
+                display:flex;
+                flex-direction: row;
+                   &__subtitle {
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    width:100%;
+                }
+                &__price {
+                    position: relative;
+                    font-weight:  bold;
+                    margin-right: 10px;
+                }             
+            }
+        }
+    }
+}
+
