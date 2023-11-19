@@ -153,6 +153,16 @@ ul li {
             height: 257px;
             width: 90%;
             
+            &__new {
+                color:#008766;
+                background-color: #99e2d0;
+                text-align: center;
+                width:70px;
+                padding: 5px;
+                position: absolute;
+                top: 2%; 
+                right: 3%;
+            }
             & img {
                 -o-object-fit: cover;
                 object-fit: cover;
