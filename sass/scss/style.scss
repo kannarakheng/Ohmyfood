@@ -4,7 +4,7 @@
 @import "function";
 @import "button";
 
-/*Font*/
+/* Font */
 
 * {
     font-family: 'roboto', sans-serif;
@@ -30,7 +30,8 @@ ul li {
     list-style-position: outside;
   }
 
-// header et formulaire
+
+/* header et formulaire style */
 
 .nav {
     &__logo {
@@ -86,6 +87,8 @@ ul li {
     }
 }
 
+/* Fonctionnement Style */
+
 .filter {
     display: flex;
     flex-direction: column;
@@ -131,6 +134,8 @@ ul li {
         }
     }    
 }    
+
+/* Restaurants style */
 
 .restaurants {
     display: flex;
@@ -195,8 +200,9 @@ ul li {
                     left:0;
                     opacity:0;
                     background: linear-gradient($primary-color,$secondary-color);
-
-                 }
+                    -webkit-background-clip: text;
+	                -webkit-text-fill-color: transparent;
+                }
             }
         }
     }
@@ -247,20 +253,10 @@ ul li {
    }
 }
 
-/* Menu page */
+/* Menu page restaurant style */
 
 .main__menu {
     background-color: $background-location;
-}
-
-.main__img {
-    & img {
-        -o-object-fit: cover;
-           object-fit: cover;
-        width:100%;
-        max-height: 400px;  
-        margin-top: -10px;
-    }
 }
 
 .nav__bar { 
@@ -278,6 +274,16 @@ ul li {
         bottom:30px;
         left:10px;
         font-size: 26px;
+    }
+}
+
+.main__img {
+    & img {
+        -o-object-fit: cover;
+           object-fit: cover;
+        width:100%;
+        max-height: 400px;  
+        margin-top: -10px;
     }
 }
 
@@ -321,6 +327,8 @@ ul li {
             left:0;
             opacity:0;
             background: linear-gradient($primary-color, $secondary-color);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     }
     &__card {
@@ -392,3 +400,42 @@ ul li {
     }
 }
 
+@keyframes Cocheplat {
+    0%{ 
+        width: 0px;
+    }
+
+
+    100% {
+        width:110px;
+    }
+  }
+
+
+.menu__card__starter, .menu__card__dish, .menu__card__dessert {
+     display: flex;
+  
+}
+
+.menu__card__starter .fa-regular, .menu__card__dish .fa-regular, .menu__card__dessert .fa-regular {
+        color:white;
+        font-size: 26px;
+        line-height: 92px;
+        margin-left: 26px;
+    }
+
+    
+.footer__button {
+    text-align: center;
+    padding:50px 0px 50px 0px;
+    background-color: $background-location;
+    &__menu {
+        @include button-pink;
+        padding:15px 60px 15px 60px;
+        transition: all 700ms ease-in-out ;
+        &:hover {
+            transform: scale(1.10);
+            box-shadow: 3px 12px 22px 3px rgba(0, 0, 0, 0.40);
+		}
+	}
+}

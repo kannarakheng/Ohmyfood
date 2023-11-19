@@ -1,3 +1,35 @@
+/* Color */
+/* Media tablette and mobile */
+/* animations Menu */
+.menu__card__starter {
+  animation: start ease-in-out 1500ms 1 both 500ms;
+}
+
+.menu__card__dish {
+  animation: start ease-in-out 1500ms 1 both 1000ms;
+}
+
+.menu__card__dessert {
+  animation: start ease-in-out 1500ms 1 both 1500ms;
+}
+
+@keyframes start {
+  0% {
+    opacity: 0;
+    height: 0px;
+  }
+  75% {
+    opacity: 0;
+    height: 100px;
+  }
+  90% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+    height: 125px;
+  }
+}
 .loader {
   display: flex;
   justify-content: center;
@@ -9,17 +41,17 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 9999;
-  animation: disappear 1500ms ease-in-out forwards;
+  animation: disappear 1400ms ease-in-out forwards;
   animation-delay: 1000ms;
 }
 .loader__container {
   border: 6px solid transparent;
   border-right-color: #9356DC;
-  border-left-color: #FF79DA;
+  border-left-color: #99E2D0;
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  animation: spin 1000ms linear infinite;
+  animation: spin 900ms linear infinite;
 }
 .loader__container::after {
   content: "";
@@ -31,11 +63,41 @@
   border: 6px solid transparent;
   border-radius: 50%;
   border-top-color: #9356DC;
-  border-bottom-color: #FF79DA;
+  border-bottom-color: #99E2D0;
   opacity: 0.6;
   animation: spinreverse 500ms linear infinite;
 }
 
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinreverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  90% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
 button {
   border: none;
   text-decoration: none;
@@ -43,7 +105,7 @@ button {
   margin: 0px 40px 0px 40px;
 }
 
-/*Font*/
+/* Font */
 * {
   font-family: "roboto", sans-serif;
   margin: 0;
@@ -65,6 +127,7 @@ ul li {
   list-style-position: outside;
 }
 
+/* header et formulaire style */
 .nav__logo {
   width: 170px;
   display: block;
@@ -123,6 +186,7 @@ ul li {
   box-shadow: 3px 12px 22px 3px rgba(0, 0, 0, 0.4);
 }
 
+/* Fonctionnement Style */
 .filter {
   display: flex;
   flex-direction: column;
@@ -170,6 +234,7 @@ ul li {
   white-space: nowrap;
 }
 
+/* Restaurants style */
 .restaurants {
   display: flex;
   flex-direction: column;
@@ -225,6 +290,8 @@ ul li {
   left: 0;
   opacity: 0;
   background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /*footer*/
@@ -268,17 +335,9 @@ ul li {
   width: 20px;
 }
 
-/* Menu page */
+/* Menu page restaurant style */
 .main__menu {
   background-color: #EAEAEA;
-}
-
-.main__img img {
-  -o-object-fit: cover;
-  object-fit: cover;
-  width: 100%;
-  max-height: 400px;
-  margin-top: -10px;
 }
 
 .nav__bar {
@@ -297,6 +356,14 @@ ul li {
   bottom: 30px;
   left: 10px;
   font-size: 26px;
+}
+
+.main__img img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 100%;
+  max-height: 400px;
+  margin-top: -10px;
 }
 
 .menu {
@@ -339,6 +406,8 @@ ul li {
   left: 0;
   opacity: 0;
   background: linear-gradient(#9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .menu__card {
   font-size: 16px;
@@ -401,6 +470,46 @@ ul li {
   position: relative;
   font-weight: bold;
   margin-right: 10px;
+}
+
+@keyframes Cocheplat {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 110px;
+  }
+}
+.menu__card__starter, .menu__card__dish, .menu__card__dessert {
+  display: flex;
+}
+
+.menu__card__starter .fa-regular, .menu__card__dish .fa-regular, .menu__card__dessert .fa-regular {
+  color: white;
+  font-size: 26px;
+  line-height: 92px;
+  margin-left: 26px;
+}
+
+.footer__button {
+  text-align: center;
+  padding: 50px 0px 50px 0px;
+  background-color: #EAEAEA;
+}
+.footer__button__menu {
+  color: white;
+  width: 218px;
+  padding: 20px;
+  border-radius: 25px;
+  margin: auto;
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  padding: 15px 60px 15px 60px;
+  transition: all 700ms ease-in-out;
+}
+.footer__button__menu:hover {
+  transform: scale(1.1);
+  box-shadow: 3px 12px 22px 3px rgba(0, 0, 0, 0.4);
 }
 
 /*# sourceMappingURL=style.css.map */

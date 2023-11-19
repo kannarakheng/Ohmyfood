@@ -9,18 +9,17 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 9999;
-    animation:disappear 1500ms ease-in-out forwards;
+    animation:disappear 1400ms ease-in-out forwards;
     animation-delay: 1000ms;
-
 
   &__container {
     border: 6px solid transparent;   
     border-right-color: $primary-color;
-    border-left-color:$secondary-color;
+    border-left-color:$tertary-color;
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    animation: spin 1000ms linear infinite;
+    animation: spin 900ms linear infinite;
    
      &::after {
         content: "";
@@ -32,10 +31,47 @@
         border:6px solid transparent;
         border-radius: 50%;
         border-top-color: $primary-color;
-        border-bottom-color: $secondary-color;
+        border-bottom-color: $tertary-color;
         opacity:0.6;
         animation: spinreverse 500ms linear infinite,
 
     } 
   }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinreverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+} 
+
+@keyframes disappear {
+
+  0% {
+    opacity:1;
+    visibility:visible;
+  }
+
+  90% {
+    opacity:1;
+    visibility:visible;
+  }
+
+  100% { 
+    opacity: 0;
+    visibility:hidden;    
+    }
+  
 }
