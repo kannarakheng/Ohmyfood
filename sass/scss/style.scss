@@ -19,7 +19,11 @@ a {
 /* General main */
 
 h2 {
-    margin: 24px; 
+    margin: 24px;
+    @media screen and (min-width:$desktop) {
+        margin:0px;
+        text-align: center;
+    } 
    
 }
 
@@ -28,10 +32,10 @@ h2 {
 ul li {
     padding-bottom: 5px;
     list-style-position: outside;
-  }
+}
 
 
-/* header et formulaire style */
+/* header and formular style */
 
 .nav {
     &__logo {
@@ -93,10 +97,23 @@ ul li {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media screen and (min-width:$desktop) {
+        padding: 20px 108px 20px 108px;
+    }
 
+    &__desktop {
+        @media screen and (min-width:$desktop) {
+            display:flex;
+            flex-direction: row;
+            justify-content: space-between;
+            gap:20px;
+        }
+    }
 
     &__title {
-        width:100%;
+        @media screen and (min-width:$desktop) {
+            width:100%;
+        }
     }
 
     &__content {
@@ -104,26 +121,33 @@ ul li {
         flex-direction: row;
         position: relative;
         align-items: center;
-        
+        @media screen and (min-width:$desktop) {
+            width: 40%;
+            margin:15px;
+            white-space: nowrap;
+        }
         @include texture-button;   
-        &:hover i {
-            color: $primary-color;
-        }  
-        p {
-            margin: 10px;
-            border-radius: 50px;
-            width: 30px;
-            height: 30px;
-            background-color: $primary-color;
-            color:$main-color;
-            line-height: 30px;
-            text-align: center;
-            position: absolute;
-            top: 12px; 
-            left: -25px;
-          }
+            &:hover i {
+                color: $primary-color;
+            }  
+            p {
+                margin: 10px;
+                border-radius: 50px;
+                width: 30px;
+                height: 30px;
+                background-color: $primary-color;
+                color:$main-color;
+                line-height: 30px;
+                text-align: center;
+                position: absolute;
+                top: 12px; 
+                left: -25px;
+            }
         & i {
             margin: 0px 5px 0px 40px;
+            @media screen and (min-width:$desktop) {
+
+            }
         }
         
         & h3 {
@@ -131,6 +155,9 @@ ul li {
             margin: 15px;
             text-align: center;
             white-space: nowrap;
+            @media screen and (min-width:$desktop) {
+                white-space:normal;
+            }
         }
     }    
 }    
@@ -142,8 +169,30 @@ ul li {
     flex-direction: column;
     background-color: $background-color;
     padding:40px 0 40px 0;
+    @media screen and (min-width:$desktop) {
+        padding-left: 108px;
+        padding-right: 108px;
+         
+    }
+    &__title {
 
+        @media screen and (min-width:$tablette) {
+            padding-bottom: 20px;
+        }
+     
+    }
     &__cards {
+        @media screen and (min-width:$tablette) {
+            display: flex;
+            flex-direction:row;
+            flex-wrap:wrap ;
+            row-gap: 50px;
+            justify-content: space-between;
+        }
+        @media screen and (min-width:$desktop) {
+            column-gap: 100px;
+        
+        }
         &__card {
             padding: 0px;
             background-color: white;
@@ -152,7 +201,15 @@ ul li {
             position: relative;
             height: 257px;
             width: 90%;
-            
+            @media screen and (min-width:$tablette){
+                width:40%;
+            }
+            @media screen and (min-width:$desktop) {
+                width:43%;
+                margin:0;
+               
+
+            }
             &__new {
                 color:#008766;
                 background-color: #99e2d0;
@@ -177,7 +234,6 @@ ul li {
                 }
             }
         }
-
     }
 }
 
@@ -234,6 +290,11 @@ ul li {
         margin:18px;
         font-size: 18px;
         cursor: pointer;
+        @media screen and (min-width:$tablette){ 
+            position: relative;
+            text-align: right;
+            top:63px;
+        }
    }
    &__list {
         display: flex;
@@ -242,10 +303,18 @@ ul li {
         padding: 0px;
         margin:20px;
         z-index: 1;
+        @media screen and (min-width:$tablette) {
+            flex-direction: row; 
+            justify-content: flex-end;
+            margin-right: 200px;
+        }
         &__text {
             text-decoration: none;
             margin: 0px;
             box-sizing: border-box;
+            @media screen and (min-width:$tablette) {
+                margin-left:25px;
+            }
             a {
                 color:$main-color;
                 display: flex;
@@ -267,6 +336,9 @@ ul li {
 
 .main__menu {
     background-color: $background-location;
+    @media screen and (min-width:$tablette){
+        background-color: $background-color;
+    }
 }
 
 .nav__bar { 
