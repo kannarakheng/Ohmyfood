@@ -22,7 +22,7 @@ h2 {
     margin: 24px;
     @media screen and (min-width:$desktop) {
         margin:0px;
-        text-align: center;
+
     } 
    
 }
@@ -377,11 +377,29 @@ ul li {
     border-top-right-radius: 25px;
     position: relative;
     top:-30px;
+    
+    @media screen and (min-width:$tablette) {
+        width:60%;
+        padding: 0 108px 0 108px;
+        margin-left: 5%;
+    }
+
+    @media screen and (min-width:$desktop){
+        width:70%;
+        padding:0 108px 0 108px;
+        margin-left:7%;
+    }
 
     &__title {
         font-family: "Shrikhand", sans-serif;
         font-size: 27px;
         margin-left: 20px;
+        @media screen and (min-width:$tablette) {
+            text-align: center;
+            margin-right: 20px;
+            padding-top: 20px;
+            
+        }
     }
     &__heart {
         cursor: pointer;
@@ -390,6 +408,16 @@ ul li {
         height:24px;
         top:8px;
         right: 40px;
+        @media screen and (min-width:$tablette){
+            position:absolute;
+            right: 100px;
+            top:25px;
+        }
+        @media screen and (min-width:$desktop){
+            position: absolute;
+            right:260px;   
+            top:25px;
+        }
         .fa-heart {
             font-size: 24px;  
             transition: opacity 500ms ease-in-out;          
@@ -420,6 +448,15 @@ ul li {
         white-space: nowrap;
         & span {
             border-bottom: 3px solid $tertary-color;         
+        }
+        @media screen and (min-width:$tablette) {
+            padding-right:20px;
+            padding-left: 20px;
+            
+        }
+        @media screen and (min-width:$desktop){
+            padding-right: 20px;
+            padding-left: 20px;
         }
         &__text {
             margin:10px;

@@ -124,7 +124,6 @@ h2 {
 @media screen and (min-width: 1024px) {
   h2 {
     margin: 0px;
-    text-align: center;
   }
 }
 
@@ -479,10 +478,31 @@ ul li {
   position: relative;
   top: -30px;
 }
+@media screen and (min-width: 768px) {
+  .menu {
+    width: 60%;
+    padding: 0 108px 0 108px;
+    margin-left: 5%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu {
+    width: 70%;
+    padding: 0 108px 0 108px;
+    margin-left: 7%;
+  }
+}
 .menu__title {
   font-family: "Shrikhand", sans-serif;
   font-size: 27px;
   margin-left: 20px;
+}
+@media screen and (min-width: 768px) {
+  .menu__title {
+    text-align: center;
+    margin-right: 20px;
+    padding-top: 20px;
+  }
 }
 .menu__heart {
   cursor: pointer;
@@ -491,6 +511,20 @@ ul li {
   height: 24px;
   top: 8px;
   right: 40px;
+}
+@media screen and (min-width: 768px) {
+  .menu__heart {
+    position: absolute;
+    right: 100px;
+    top: 25px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu__heart {
+    position: absolute;
+    right: 260px;
+    top: 25px;
+  }
 }
 .menu__heart .fa-heart {
   font-size: 24px;
@@ -521,6 +555,18 @@ ul li {
 }
 .menu__card span {
   border-bottom: 3px solid #99E2D0;
+}
+@media screen and (min-width: 768px) {
+  .menu__card {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu__card {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
 }
 .menu__card__text {
   margin: 10px;
