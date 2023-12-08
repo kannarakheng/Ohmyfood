@@ -82,11 +82,12 @@ ul li {
         }
         &__button {
             @include button-pink;
-            transition: all 700ms ease-in-out ;
+            transition: all 500ms ease-in-out ;
 
         &:hover {
-            transform: scale(1.10);
-            box-shadow: 3px 12px 22px 3px rgba(0, 0, 0, 0.40);   
+            transform: scale(1.05);
+            box-shadow: 3px 12px 22px 3px rgba(0, 0, 0, 0.40);
+            background: linear-gradient($secondary-color2,$primary-color2);   
         }
     }
 }
@@ -378,16 +379,19 @@ ul li {
     position: relative;
     top:-30px;
     
+    
     @media screen and (min-width:$tablette) {
         width:60%;
         padding: 0 108px 0 108px;
         margin-left: 5%;
+        margin-bottom: -30px;
     }
 
     @media screen and (min-width:$desktop){
         width:70%;
         padding:0 108px 0 108px;
         margin-left:7%;
+        margin-bottom: -30px;
     }
 
     &__title {
@@ -460,7 +464,7 @@ ul li {
         }
         &__text {
             margin:10px;
-            font-weight: normal;
+            font-size: 18px;
         }
         &__content {
             display: flex;
@@ -551,9 +555,10 @@ ul li {
     &__menu {
         @include button-pink;
         padding:15px 60px 15px 60px;
-        transition: all 700ms ease-in-out ;
+        transition: all 500ms ease-in-out ;
         &:hover {
             transform: scale(1.10);
+            background: linear-gradient($secondary-color2,$primary-color2);
             box-shadow: 3px 12px 22px 3px rgba(0, 0, 0, 0.40);
 		}
 	}
